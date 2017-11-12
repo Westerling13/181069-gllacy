@@ -6,12 +6,12 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
         <p class="main-header-logo">
           <a href="index.html">
             <img src="img/gllacy-logo.svg" width="154" height="64" alt="Логотип GllacyShop">
           </a>
         </p>
+      <nav class="main-navigation">
         <ul class="site-navigation">
           <li class="catalog-link catalog-link-current"><a href="#">Каталог</a>
             <ul class="catalog-navigation">
@@ -27,21 +27,91 @@
         </ul>
       </nav>
       <div class="search">
-        <a href="#" class="search-button"></a>
-        <!-- Форма поиска -->
+        <a href="#" class="search-button">
+          <img src="img/loupe.svg" width="17" height="17" alt="Лупа">
+        </a>
+        <div class="search-form">
+          <form action="#" method="get">
+            <label class="visual-hidden" for="search">Поиск</label>
+            <input type="search" name="search" id="search" placeholder="Что ищем?">
+          </form>
+        </div>
       </div>
       <ul class="user-navigation">
-          <li><a href="#">Вход</a></li>
-          <!-- Форма входа
-          <a href="#" class="sign-in-links">Забыли пароль?</a>
-          <a href="#" class="sign-in-links">Новая регистрация</a> -->
-          <!-- Для кнопки "Войти" class="button sign-in-button" -->
+        <li>
+          <a href="#">
+            <img src="img/sign-in.svg" width="21" height="19" alt="Вход">
+            <span class="sign-in-text">Вход</span>
+          </a>
+          <div class="sign-in-form">
+            <form action="#" method="post">
+              <label class="visual-hidden" for="user-email">Электронная почта</label>
+              <input type="email" name="email" id="user-email" placeholder="Электронная почта"><br>
+              <label class="visual-hidden" for="user-password">Пароль</label>
+              <input type="password" name="password" id="user-password" placeholder="Пароль">
+              <button type="submit" class="button sign-in-button" name="user-sign-in">Войти</button>
+              <a href="#" class="sign-in-links">Забыли пароль?</a>
+              <a href="#" class="sign-in-links">Новая регистрация</a>
+            </form>
+          </div>
+        </li>
       </ul>
+
       <div class="basket">
-        <a class="basket-empty basket-full">2 товара</a>
-        <!-- Форма корзины -->
-        <!-- Для кнопки "Оформить заказ" class="button basket-button" -->
+        <a class="basket-empty basket-full">
+          <img src="img/basket-full.svg" width="21" height="20" alt="Корзина">
+          2 товара
+        </a>
+        <div class="basket-list">
+          <table>
+            <tr class="basket-position-1">
+              <td class="basket-delete">
+                <button class="basket-delete-x">
+                  <span class="visual-hidden">Удалить</span>
+                  <img src="img/basket-x.svg" width="11" height="11" alt="Удалить">
+                </button>
+              </td>
+              <td class="basket-image">
+                <img src="img/icecream-1.jpg" width="33" height="33" alt="icecream-1">
+              </td>
+              <td class="basket-product">
+                <p class="basket-product-paragraph">Пломбир с апельсиновым джемом</p>
+              </td>
+              <td class="basket-amount">
+                <p class="basket-amount-paragraph">1,5 кг х <span class="basket-amount-r">200 руб.</span></p>
+              </td>
+              <td class="basket-price">
+                <p class="basket-price-paragraph">300 руб.</p>
+              </td>
+            </tr>
+            <tr class="basket-position-2">
+              <td class="basket-delete">
+                <button class="basket-delete-x">
+                  <span class="visual-hidden">Удалить</span>
+                  <img src="img/basket-x.svg" width="11" height="11" alt="Удалить">
+                </button>
+              </td>
+              <td class="basket-image">
+                <img src="img/icecream-2.jpg" width="33" height="33" alt="icecream-2">
+              </td>
+              <td class="basket-product">
+                <p class="basket-product-paragraph">Клубничный пломбир с присыпкой из белого шоколада</p>
+              </td>
+              <td class="basket-amount">
+                <p class="basket-amount-paragraph">1,5 кг х <span class="basket-amount-r">300 руб.</span></p>
+              </td>
+              <td class="basket-price">
+                <p class="basket-price-paragraph">450 руб.</p>
+              </td>
+            </tr>
+          </table>
+          <div class="total">
+            <p class="total-paragraph">Итого: 750 руб.</p>
+          </div>
+          <a class="button basket-button" href="#">Оформить заказ</a>
+        </div>
       </div>
+
       <p class="inf">
         С 10 до 20, ежедневно
         <br>
@@ -60,7 +130,59 @@
 
       <section class="filers">
         <h2 class="visual-hidden">Фильтр товаров</h2>
-        <!-- Формы сортировки -->
+        <div class="filters-form">
+          <form action="#" method="get" oninput="output.value=range.value">
+
+            <fieldset class="form-style form-sort">
+              <legend>Сортировка</legend>
+              <select name="sort" id="sort">
+                <option selected>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+            </fieldset>
+
+            <fieldset class="form-style form-price">
+              <legend>Цена:</legend>
+              <output name="output">500</output>
+              <input type="range" min="100" max="700" step="100" name="range" id="range">
+            </fieldset>
+
+            <fieldset class="form-style form-fat">
+              <legend>Жирность:</legend>
+              <label for="fat-0">0%</label>
+              <input type="radio" name="fat-content" id="fat-0" value="a">
+              <label for="fat-10">до 10%</label>
+              <input type="radio" name="fat-content" id="fat-10" value="b">
+              <label for="fat-30">до 30%</label>
+              <input type="radio" name="fat-content" id="fat-30" value="c">
+              <label for="fat-over-30">выше 30%</label>
+              <input type="radio" name="fat-content" id="fat-over-30" value="d">
+            </fieldset>
+
+            <fieldset class="form-style form-fillers">
+              <legend>Наполнители:</legend>
+              <label for="choco">шоколадные</label>
+              <input type="checkbox" name="choco" id="choco" checked>
+              <label for="sugar">сахарные присыпки</label>
+              <input type="checkbox" name="sugar" id="sugar" checked>
+              <label for="frut">фрукты</label>
+              <input type="checkbox" name="frut" id="frut">
+              <label for="syrup">сиропы</label>
+              <input type="checkbox" name="syrup" id="syrup">
+              <label for="jam">джемы</label>
+              <input type="checkbox" name="jam" id="jam">
+            </fieldset>
+
+            <div class="form-style form-submit">
+              <button class="form-button" type="submit">
+                Применить
+              </button>
+            </div>
+
+          </form>
+        </div>
       </section>
 
       <section class="products">
@@ -180,10 +302,30 @@
     <footer class="main-footer">
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="#">Твиттер</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/twitter.svg" width="38" height="38" alt="Твиттер">
+              <span class="visual-hidden">Твиттер</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/instagram.svg" width="38" height="38" alt="Инстаграм">
+              <span class="visual-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/fb.svg" width="38" height="38" alt="Фейсбук">
+              <span class="visual-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/vk.svg" width="38" height="38" alt="Вконтакте">
+              <span class="visual-hidden">Вконтакте</span>
+            </a>
+          </li>
         </ul>
       </div>
       <nav class="footer-navigation">
@@ -205,9 +347,21 @@
     <section class="feedback-form">
       <h2 class="visual-hidden">Форма обратной связи</h2>
       <h3>Мы обязательно вам ответим!</h3>
-      <span class="close-button">X</span>
-      <!-- Форма обратной связи -->
-      <!-- Для кнопки "Отправить" class="button feedback-form-button" -->
+      <button class="close-button">
+        <img src="img/x.svg" width="18" height="17" alt="Закрыть форму">
+      </button>
+      <form action="#" method="post">
+        <label class="visual-hidden" for="feedback-name">Имя</label><br>
+        <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?"><br>
+        <label class="visual-hidden" for="feedback-email">Электронная почта</label><br>
+        <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?"><br>
+        <textarea rows="6" cols="40">
+          Напишите что нибудь...
+        </textarea><br>
+        <button class="button feedback-form-button" type="submit" name="feedback">
+          Отправить
+        </button>
+      </form>
     </section>
 
   </body>

@@ -25,25 +25,43 @@
         </ul>
       </nav>
       <div class="search">
-        <a href="#" class="search-button"></a>
-        <!-- Форма поиска -->
+        <a href="#" class="search-button">
+          <img src="img/loupe.svg" width="17" height="17" alt="Лупа">
+        </a>
+        <div class="search-form">
+          <form action="#" method="get">
+            <label class="visual-hidden" for="search">Поиск</label>
+            <input type="search" name="search" id="search" placeholder="Что ищем?">
+          </form>
+        </div>
       </div>
       <ul class="user-navigation">
-          <li><a href="#">Вход</a></li>
-          <!-- Форма входа
-          <a href="#" class="sign-in-links">Забыли пароль?</a>
-          <a href="#" class="sign-in-links">Новая регистрация</a> -->
-          <!-- Для кнопки "Войти" class="button sign-in-button" -->
+        <li>
+          <a href="#">
+            <img src="img/sign-in.svg" width="21" height="19" alt="Вход">
+            <span class="sign-in-text">Вход</span>
+          </a>
+          <div class="sign-in-form">
+            <form action="#" method="post">
+              <label class="visual-hidden" for="user-email">Электронная почта</label>
+              <input type="email" name="email" id="user-email" placeholder="Электронная почта"><br>
+              <label class="visual-hidden" for="user-password">Пароль</label>
+              <input type="password" name="password" id="user-password" placeholder="Пароль">
+              <button type="submit" class="button sign-in-button" name="user-sign-in">Войти</button>
+              <a href="#" class="sign-in-links">Забыли пароль?</a>
+              <a href="#" class="sign-in-links">Новая регистрация</a>
+            </form>
+          </div>
+        </li>
       </ul>
       <div class="basket">
         <a class="basket-empty basket-full">Пусто</a>
-        <!-- Форма корзины -->
       </div>
       <p class="inf">
         С 10 до 20, ежедневно
         <br>
-        <span class="number">8 812 450-25-25<span>
-      <p>
+        <span class="number">8 812 450-25-25</span>
+      </p>
     </header>
 
     <main class="container">
@@ -90,7 +108,7 @@
             </a>
             <img src="img/product-01.jpg" alt="product-01">
             <p class="price">310 р/<span class="kg">кг</span></p>
-            <span class="button send-button">Быстрый просмотр</span>
+            <a href="#" class="button send-button">Быстрый просмотр</a>
           </li>
           <li class="icecream  icecream-hit">
             <a href="#" class="icecream-name">
@@ -98,7 +116,7 @@
             </a>
             <img src="img/product-02.jpg" alt="product-02">
             <p class="price">380 р/<span class="kg">кг</span></p>
-            <span class="button send-button">Быстрый просмотр</span>
+            <a href="#" class="button send-button">Быстрый просмотр</a>
           </li>
           <li class="icecream  icecream-hit">
             <a href="#" class="icecream-name">
@@ -106,7 +124,7 @@
             </a>
             <img src="img/product-03.jpg" alt="product-03">
             <p class="price">355 р/<span class="kg">кг</span></p>
-            <span class="button send-button">Быстрый просмотр</span>
+            <a href="#" class="button send-button">Быстрый просмотр</a>
           </li>
           <li class="icecream  icecream-hit">
             <a href="#" class="icecream-name">
@@ -114,7 +132,7 @@
             </a>
             <img src="img/product-04.jpg" alt="product-04">
             <p class="price">415 р/<span class="kg">кг</span></p>
-            <span class="button send-button">Быстрый просмотр</span>
+            <a href="#" class="button send-button">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -168,8 +186,13 @@
           всего самого вкусного, что у нас происходит. Обещаем не спамить
           и не слать всякой ненужной ерунды. Честно =)
         </p>
-        <!-- Форма подписки на рассылку -->
-        <!-- Для кнопки "Отправить" class="button dispatch-button" -->
+        <div class="dispatch-form">
+          <form action="#" method="post">
+            <label class="visual-hidden" for="dispatch-email">Электронная почта</label>
+            <input type="email" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
+            <button class="button dispatch-button">Отправить</button>
+          </form>
+        </div>
       </section>
 
       <section class="map">
@@ -191,7 +214,7 @@
             <span class="feedback-bold">8 812 450-25-25</span>
             (с 10 до 20 ежедневно)
           </p>
-          <a href="#" class="button feedback-button">Форма обратной связи</a>
+          <button class="button feedback-button">Форма обратной связи</button>
         </div>
       </section>
 
@@ -200,10 +223,30 @@
     <footer class="main-footer">
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="#">Твиттер</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/twitter.svg" width="38" height="38" alt="Твиттер">
+              <span class="visual-hidden">Твиттер</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/instagram.svg" width="38" height="38" alt="Инстаграм">
+              <span class="visual-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/fb.svg" width="38" height="38" alt="Фейсбук">
+              <span class="visual-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/vk.svg" width="38" height="38" alt="Вконтакте">
+              <span class="visual-hidden">Вконтакте</span>
+            </a>
+          </li>
         </ul>
       </div>
       <nav class="footer-navigation">
@@ -225,9 +268,21 @@
     <section class="feedback-form">
       <h2 class="visual-hidden">Форма обратной связи</h2>
       <h3>Мы обязательно вам ответим!</h3>
-      <span class="close-button">X</span>
-      <!-- Форма обратной связи -->
-      <!-- Для кнопки "Отправить" class="button feedback-form-button" -->
+      <button class="close-button">
+        <img src="img/x.svg" width="18" height="17" alt="Закрыть форму">
+      </button>
+      <form action="#" method="post">
+        <label class="visual-hidden" for="feedback-name">Имя</label><br>
+        <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?"><br>
+        <label class="visual-hidden" for="feedback-email">Электронная почта</label><br>
+        <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?"><br>
+        <textarea rows="6" cols="40">
+          Напишите что нибудь...
+        </textarea><br>
+        <button class="button feedback-form-button" type="submit" name="feedback">
+          Отправить
+        </button>
+      </form>
     </section>
 
   </body>
