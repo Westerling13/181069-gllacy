@@ -3,88 +3,88 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
+
     <header class="main-header">
       <p class="main-header-logo">
         <img src="img/gllacy-logo.svg" width="154" height="64" alt="Логотип GllacyShop">
       </p>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li class="catalog-link catalog-link-current"><a href="#">Каталог</a>
+          <li class="header-link catalog"><a class="catalog-link" href="#">Каталог</a>
             <ul class="catalog-navigation">
-              <li class="catalog-novelties"><a href="#">Новинки</a></li>
-              <li><a href="catalog.html">Сливочное</a></li>
+              <li><a class="novelties-link" href="#">Новинки</a></li>
+              <li><a class="creamy-link" href="catalog.html">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
               <li><a href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О Компании</a></li>
+          <li class="header-link"><a href="#">Доставка и оплата</a></li>
+          <li class="header-link"><a href="#">О Компании</a></li>
         </ul>
       </nav>
       <div class="search">
         <a href="#" class="search-button">
-          <img src="img/loupe.svg" width="17" height="17" alt="Лупа">
+          <span class="visually-hidden">Поиск</span>
         </a>
-        <div class="search-form">
-          <form action="#" method="get">
-            <label class="visual-hidden" for="search">Поиск</label>
-            <input type="search" name="search" id="search" placeholder="Что ищем?">
-          </form>
-        </div>
+        <form class="form-style search-form" action="#" method="get">
+          <label class="visually-hidden" for="search">Поиск</label>
+          <input type="search" name="search" id="search" placeholder="Что ищем?">
+        </form>
       </div>
       <ul class="user-navigation">
         <li>
-          <a href="#">
-            <img src="img/sign-in.svg" width="21" height="19" alt="Вход">
-            <span class="sign-in-text">Вход</span>
+          <a class="form-style sign-in-button" href="#">
+            Вход
           </a>
-          <div class="sign-in-form">
-            <form action="#" method="post">
-              <label class="visual-hidden" for="user-email">Электронная почта</label>
-              <input type="email" name="email" id="user-email" placeholder="Электронная почта"><br>
-              <label class="visual-hidden" for="user-password">Пароль</label>
-              <input type="password" name="password" id="user-password" placeholder="Пароль">
-              <button type="submit" class="button sign-in-button" name="user-sign-in">Войти</button>
-              <a href="#" class="sign-in-links">Забыли пароль?</a>
-              <a href="#" class="sign-in-links">Новая регистрация</a>
-            </form>
-          </div>
+          <form class="form-style sign-in-form" action="#" method="post">
+            <label class="visually-hidden" for="user-email">Электронная почта</label>
+            <input type="email" name="email" id="user-email" placeholder="Электронная почта"><br>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input type="password" name="password" id="user-password" placeholder="Пароль"><br>
+            <button type="submit" class="button sign-in-button" name="user-sign-in">Войти</button><br>
+            <a href="#" class="sign-in-link">Забыли пароль?</a><br>
+            <a href="#" class="sign-in-link">Новая регистрация</a>
+          </form>
         </li>
       </ul>
       <div class="basket">
-        <a class="basket-empty basket-full">Пусто</a>
+        <a class="form-style basket-empty">Пусто</a>
       </div>
-      <p class="inf">
+      <p class="info">
         С 10 до 20, ежедневно
         <br>
-        <span class="number">8 812 450-25-25</span>
+        <span class="info-number">8 812 450-25-25</span>
       </p>
     </header>
 
     <main class="container">
 
-      <h1 class="visual-hidden">Магазин мороженого Глэйси</h1>
+      <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
 
       <section class="slider">
-        <h2 class="visual-hidden">Слайдер</h2>
+        <h2 class="visually-hidden">Слайдер</h2>
         <ul class="slider-list">
           <li class="slider-brulee">Крем-брюле и пломбир с малиновым джемом</li>
           <li class="slider-chocolate">Шоколадный пломбир и лимонный сорбет</li>
           <li class="slider-sweet">Пломбир с помадкой и клубничный щербет</li>
         </ul>
-        <a href="#" class="button slider-button">Дайте оба!</a>
+        <a href="#" class="button slider-button">Давайте оба!</a>
         <ul class="slider-switch">
-          <li><button class="slider-switch-button"></button></li>
+          <li><button class="slider-switch-button slider-switch-button-current"></button></li>
           <li><button class="slider-switch-button"></button></li>
           <li><button class="slider-switch-button"></button></li>
         </ul>
       </section>
 
       <section class="shares">
-        <h2 class="visual-hidden">Акции</h2>
+        <h2 class="visually-hidden">Акции</h2>
         <ul class="shares-list">
           <li class="shares-raspberries">
             <h3>Малинка даром!</h3>
@@ -100,14 +100,14 @@
       </section>
 
       <section class="hits">
-        <h2 class="visual-hidden">Хиты продаж</h2>
+        <h2 class="visually-hidden">Хиты продаж</h2>
         <ul>
           <li class="icecream icecream-hit">
             <a href="#" class="icecream-name">
               <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             </a>
             <img src="img/product-01.jpg" alt="product-01">
-            <p class="price">310 р/<span class="kg">кг</span></p>
+            <p class="price">310 &#8381;<span class="kg">/кг</span></p>
             <a href="#" class="button send-button">Быстрый просмотр</a>
           </li>
           <li class="icecream  icecream-hit">
@@ -115,7 +115,7 @@
               <h3>Сливочно-кофейное с кусочками шоколада</h3>
             </a>
             <img src="img/product-02.jpg" alt="product-02">
-            <p class="price">380 р/<span class="kg">кг</span></p>
+            <p class="price">380 &#8381;<span class="kg">/кг</span></p>
             <a href="#" class="button send-button">Быстрый просмотр</a>
           </li>
           <li class="icecream  icecream-hit">
@@ -123,7 +123,7 @@
               <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
             </a>
             <img src="img/product-03.jpg" alt="product-03">
-            <p class="price">355 р/<span class="kg">кг</span></p>
+            <p class="price">355 &#8381;<span class="kg">/кг</span></p>
             <a href="#" class="button send-button">Быстрый просмотр</a>
           </li>
           <li class="icecream  icecream-hit">
@@ -131,14 +131,14 @@
               <h3>Сливочное крем-брюле с карамельной подливкой</h3>
             </a>
             <img src="img/product-04.jpg" alt="product-04">
-            <p class="price">415 р/<span class="kg">кг</span></p>
+            <p class="price">415 &#8381;<span class="kg">/кг</span></p>
             <a href="#" class="button send-button">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
 
       <section class="about">
-        <h2 class="visual-hidden">О нас</h2>
+        <h2 class="visually-hidden">О нас</h2>
         <h3 class="about-header">
           Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного
           производства на развес
@@ -180,29 +180,31 @@
       </article>
 
       <section class="dispatch">
-        <h2 class="visual-hidden">Подписка на рассылку</h2>
-        <p class="dispatch-text">
-          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
-          всего самого вкусного, что у нас происходит. Обещаем не спамить
-          и не слать всякой ненужной ерунды. Честно =)
-        </p>
-        <div class="dispatch-form">
-          <form action="#" method="post">
-            <label class="visual-hidden" for="dispatch-email">Электронная почта</label>
-            <input type="email" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
-            <button class="button dispatch-button">Отправить</button>
-          </form>
+        <div class="add-background">
+          <h2 class="visually-hidden">Подписка на рассылку</h2>
+          <p class="dispatch-text">
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
+            всего самого вкусного, что у нас происходит. Обещаем не спамить
+            и не слать всякой ненужной ерунды. Честно =)
+          </p>
+          <div class="dispatch-form">
+            <form action="#" method="post">
+              <label class="visually-hidden" for="dispatch-email">Электронная почта</label>
+              <input type="email" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
+              <button class="button dispatch-button">Отправить</button>
+            </form>
+          </div>
         </div>
       </section>
 
       <section class="map">
-        <h2 class="visual-hidden">Карта</h2>
+        <h2 class="visually-hidden">Карта</h2>
         <div class="map-input">
           <img src="img/map.png" width="1200" height="640" alt="Карта">
           <!-- Карта -->
         </div>
         <div class="feedback">
-          <h3 class="visual-hidden">Обратная связь</h3>
+          <h3 class="visually-hidden">Обратная связь</h3>
           <p>
             Адрес главного офиса
             и офлайн-магазина:
@@ -224,57 +226,57 @@
       <div class="footer-social">
         <ul>
           <li>
-            <a class="social-button" href="#">
-              <img src="img/twitter.svg" width="38" height="38" alt="Твиттер">
-              <span class="visual-hidden">Твиттер</span>
+            <a class="social" href="#">
+              <span class="visually-hidden">Твиттер</span>
+              <span class="social-button twitter"></span>
             </a>
           </li>
           <li>
-            <a class="social-button" href="#">
-              <img src="img/instagram.svg" width="38" height="38" alt="Инстаграм">
-              <span class="visual-hidden">Инстаграм</span>
+            <a class="social" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+              <span class="social-button instagram"></span>
             </a>
           </li>
           <li>
-            <a class="social-button" href="#">
-              <img src="img/fb.svg" width="38" height="38" alt="Фейсбук">
-              <span class="visual-hidden">Фейсбук</span>
+            <a class="social" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+              <span class="social-button facebook"></span>
             </a>
           </li>
           <li>
-            <a class="social-button" href="#">
-              <img src="img/vk.svg" width="38" height="38" alt="Вконтакте">
-              <span class="visual-hidden">Вконтакте</span>
+            <a class="social" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+              <span class="social-button vkontakte"></span>
             </a>
           </li>
         </ul>
       </div>
       <nav class="footer-navigation">
         <ul>
-          <li><a class="footer-navigation-links footer-bold" href="#">Для поставщиков</a></li>
-          <li><a class="footer-navigation-links" href="#">О производстве</a></li>
-          <li><a class="footer-navigation-links" href="#">Наши документы</a></li>
-          <li><a class="footer-navigation-links" href="#">Экологические стандарты</a></li>
+          <li class="heart"><a class="footer-navigation-link footer-bold" href="#">Для поставщиков</a></li>
+          <li><a class="footer-navigation-link" href="#">О производстве</a></li>
+          <li><a class="footer-navigation-link" href="#">Наши документы</a></li>
+          <li><a class="footer-navigation-link" href="#">Экологические стандарты</a></li>
         </ul>
       </nav>
       <div class="footer-copyright">
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/htmlacademy-logo.svg" alt="Логотип htmlacademy">
         </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+        <p>Сделано в <a class="footer-navigation-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
       </div>
     </footer>
 
     <section class="feedback-form">
-      <h2 class="visual-hidden">Форма обратной связи</h2>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <h3>Мы обязательно вам ответим!</h3>
       <button class="close-button">
-        <img src="img/x.svg" width="18" height="17" alt="Закрыть форму">
+        <span class="visually-hidden">Закрыть</span>
       </button>
-      <form action="#" method="post">
-        <label class="visual-hidden" for="feedback-name">Имя</label><br>
+      <form class="form-style" action="#" method="post">
+        <label class="visually-hidden" for="feedback-name">Имя</label><br>
         <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?"><br>
-        <label class="visual-hidden" for="feedback-email">Электронная почта</label><br>
+        <label class="visually-hidden" for="feedback-email">Электронная почта</label><br>
         <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?"><br>
         <textarea rows="6" cols="40">
           Напишите что нибудь...
