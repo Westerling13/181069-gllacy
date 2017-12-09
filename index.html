@@ -27,7 +27,7 @@
                 <ul class="site-navigation">
                   <li class="catalog">
                     <a class="header-link catalog-link" href="#">Каталог</a>
-                    <ul class="catalog-navigation">
+                    <ul class="modal catalog-navigation">
                       <li><a class="catalog-navigation-link novelties-link" href="#">Новинки</a></li>
                       <li><a class="catalog-navigation-link creamy-link" href="catalog.html">Сливочное</a></li>
                       <li><a class="catalog-navigation-link" href="#">Щербеты</a></li>
@@ -41,30 +41,34 @@
               </nav>
               <div class="right-navigation-container">
                 <div class="search">
-                  <a class="right-navigation-link search-link" href="#">
+                  <a class="search-link right-navigation-link" href="#">
                     <span class="visually-hidden">Поиск</span>
                   </a>
-                  <form class="form-style search-form" action="#" method="get">
-                    <label class="visually-hidden" for="search">Поиск</label>
-                    <input type="search" name="search" id="search" placeholder="Что ищем?">
-                  </form>
+                  <div class="modal search-modal">
+                    <form class="form-style search-form" action="#" method="get">
+                      <label class="visually-hidden" for="search">Поиск</label>
+                      <input type="search" name="search" id="search" placeholder="Что ищем?">
+                    </form>
+                  </div>
                 </div>
                 <ul class="user-navigation">
                   <li>
-                    <a class="right-navigation-link sign-in-link" href="#">
+                    <a class="sign-in-link right-navigation-link" href="#">
                       Вход
                     </a>
-                    <form class="form-style sign-in-form" action="#" method="post">
-                      <label class="visually-hidden" for="user-email">Электронная почта</label>
-                      <input type="email" name="email" id="user-email" placeholder="Электронная почта">
-                      <label class="visually-hidden" for="user-password">Пароль</label>
-                      <input type="password" name="password" id="user-password" placeholder="Пароль">
-                      <button type="submit" class="button sign-in-button" name="user-sign-in">Войти</button>
-                      <div class="user-help">
-                        <a href="#" class="user-help-link">Забыли пароль?</a>
-                        <a href="#" class="user-help-link">Новая регистрация</a>
-                      </div>
-                    </form>
+                    <div class="modal sign-in-modal">
+                      <form class="form-style sign-in-form" action="#" method="post">
+                        <label class="visually-hidden" for="user-email">Электронная почта</label>
+                        <input type="email" name="email" id="user-email" placeholder="Электронная почта">
+                        <label class="visually-hidden" for="user-password">Пароль</label>
+                        <input type="password" name="password" id="user-password" placeholder="Пароль">
+                        <button type="submit" class="button sign-in-button" name="user-sign-in">Войти</button>
+                        <div class="user-help">
+                          <a href="#" class="user-help-link">Забыли пароль?</a>
+                          <a href="#" class="user-help-link">Новая регистрация</a>
+                        </div>
+                      </form>
+                    </div>
                   </li>
                 </ul>
                 <div class="basket">
@@ -84,7 +88,7 @@
 
         <main class="container">
 
-          <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
+          <h1 class="big-header visually-hidden">Магазин мороженого Глэйси</h1>
 
           <section class="slider">
             <h2 class="visually-hidden">Слайдер</h2>
@@ -242,8 +246,8 @@
           <section class="map">
             <h2 class="visually-hidden">Карта</h2>
             <div class="map-input">
-              <!-- <img src="img/map.png" width="1200" height="640" alt="Карта"> -->
-              <!-- Карта -->
+              <iframe src="https://yandex.ru/map-widget/v1/-/CBa0J0CATD" width="1200" height="428" frameborder="0"></iframe>
+              <img src="img/map.png" width="1200" height="430" alt="Карта">
             </div>
             <div class="feedback">
               <h3 class="visually-hidden">Обратная связь</h3>
@@ -297,17 +301,17 @@
               </ul>
             </div>
             <nav class="footer-navigation">
-            <ul class="footer-navigation-list">
-              <li>
-                <a class="footer-navigation-link footer-bold" href="#">Для поставщиков</a>
-                <a class="footer-navigation-link" href="#">О производстве</a>
-              </li>
-              <li>
-                <a class="footer-navigation-link" href="#">Наши документы</a>
-                <a class="footer-navigation-link" href="#">Экологические стандарты</a>
-              </li>
-            </ul>
-          </nav>
+              <ul class="footer-navigation-list">
+                <li>
+                  <a class="footer-navigation-link footer-bold" href="#">Для поставщиков</a>
+                  <a class="footer-navigation-link" href="#">О производстве</a>
+                </li>
+                <li>
+                  <a class="footer-navigation-link" href="#">Наши документы</a>
+                  <a class="footer-navigation-link" href="#">Экологические стандарты</a>
+                </li>
+              </ul>
+            </nav>
           </div>
           <div class="footer-copyright">
             <a class="footer-logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
@@ -317,24 +321,29 @@
           </div>
         </footer>
 
-        <section class="feedback-form">
-          <h2 class="visually-hidden">Форма обратной связи</h2>
-          <h3 class="feedback-form-header">Мы обязательно вам ответим!</h3>
-          <button class="close-button"></button>
-          <form class="form-style" action="#" method="post">
-            <label class="visually-hidden" for="feedback-name">Имя</label>
-            <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
-            <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-            <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
-            <textarea rows="6" cols="40" placeholder="Напишите что нибудь..."></textarea>
-            <button class="button feedback-form-button" type="submit" name="feedback">
-              Отправить
-            </button>
-          </form>
-        </section>
+        <div class="modal feedback-modal-wrapper">
+          <section class="feedback-modal">
+            <h2 class="visually-hidden">Форма обратной связи</h2>
+            <h3 class="feedback-modal-header">Мы обязательно вам ответим!</h3>
+            <button class="modal-close"></button>
+            <form class="form-style" action="#" method="post">
+              <label class="visually-hidden" for="feedback-name">Имя</label>
+              <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+              <label class="visually-hidden" for="feedback-email">Электронная почта</label>
+              <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+              <textarea rows="6" cols="40" placeholder="Напишите что нибудь..."></textarea>
+              <button class="button feedback-modal-button" type="submit" name="feedback">
+                Отправить
+              </button>
+            </form>
+          </section>
+        </div>
 
       </div>
     </div>
+
+    <script src="js/pop-up.js"></script>
+    <script src="js/basket.js"></script>
 
   </body>
 </html>

@@ -12,6 +12,7 @@
 
   <div class="catalog-page-wrapper">
     <div class="site-container">
+
       <header class="main-header">
         <div class="top-container">
           <p class="main-header-logo">
@@ -24,7 +25,7 @@
               <ul class="site-navigation">
                 <li class="catalog">
                   <a class="header-link catalog-link current-link" href="#">Каталог</a>
-                  <ul class="catalog-navigation">
+                  <ul class="modal catalog-navigation">
                     <li><a class="catalog-navigation-link novelties-link" href="#">Новинки</a></li>
                     <li><a class="catalog-navigation-link creamy-link current-link" href="catalog.html">Сливочное</a></li>
                     <li><a class="catalog-navigation-link" href="#">Щербеты</a></li>
@@ -41,32 +42,36 @@
                 <a class="right-navigation-link search-link" href="#">
                   <span class="visually-hidden">Поиск</span>
                 </a>
-                <form class="form-style search-form" action="#" method="get">
-                  <label class="visually-hidden" for="search">Поиск</label>
-                  <input type="search" name="search" id="search" placeholder="Что ищем?">
-                </form>
+                <div class="modal search-modal">
+                  <form class="form-style search-form" action="#" method="get">
+                    <label class="visually-hidden" for="search">Поиск</label>
+                    <input type="search" name="search" id="search" placeholder="Что ищем?">
+                  </form>
+                </div>
               </div>
               <ul class="user-navigation">
                 <li>
                   <a class="right-navigation-link sign-in-link" href="#">
                     Вход
                   </a>
-                  <form class="form-style sign-in-form" action="#" method="post">
-                    <label class="visually-hidden" for="user-email">Электронная почта</label>
-                    <input type="email" name="email" id="user-email" placeholder="Электронная почта">
-                    <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input type="password" name="password" id="user-password" placeholder="Пароль">
-                    <button type="submit" class="button sign-in-button" name="user-sign-in">Войти</button>
-                    <div class="user-help">
-                      <a href="#" class="user-help-link">Забыли пароль?</a>
-                      <a href="#" class="user-help-link">Новая регистрация</a>
-                    </div>
-                  </form>
+                  <div class="modal sign-in-modal">
+                    <form class="form-style sign-in-form" action="#" method="post">
+                      <label class="visually-hidden" for="user-email">Электронная почта</label>
+                      <input type="email" name="email" id="user-email" placeholder="Электронная почта">
+                      <label class="visually-hidden" for="user-password">Пароль</label>
+                      <input type="password" name="password" id="user-password" placeholder="Пароль">
+                      <button type="submit" class="button sign-in-button" name="user-sign-in">Войти</button>
+                      <div class="user-help">
+                        <a href="#" class="user-help-link">Забыли пароль?</a>
+                        <a href="#" class="user-help-link">Новая регистрация</a>
+                      </div>
+                    </form>
+                  </div>
                 </li>
               </ul>
               <div class="basket">
                 <a class="right-navigation-link basket-full" href="#">2 товара</a>
-                <div class="basket-list">
+                <div class="modal basket-list">
                   <table class="basket-table">
                     <tr class="basket-position">
                       <td class="basket-delete">
@@ -75,7 +80,7 @@
                         </button>
                       </td>
                       <td class="basket-image">
-                        <img src="img/icecream-1.jpg" width="33" height="33" alt="icecream-1">
+                        <img src="img/icecream-1.png" width="33" height="33" alt="icecream-1">
                       </td>
                       <td class="basket-product">
                         <p class="basket-product-paragraph">Пломбир с апельсиновым джемом</p>
@@ -94,7 +99,7 @@
                         </button>
                       </td>
                       <td class="basket-image">
-                        <img src="img/icecream-2.jpg" width="33" height="33" alt="icecream-2">
+                        <img src="img/icecream-2.png" width="33" height="33" alt="icecream-2">
                       </td>
                       <td class="basket-product">
                         <p class="basket-product-paragraph">Клубничный пломбир с присыпкой из белого шоколада</p>
@@ -131,7 +136,7 @@
 
       <main class="container">
 
-        <h1>Сливочное мороженое</h1>
+        <h1 class="big-header">Сливочное мороженое</h1>
 
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -282,7 +287,7 @@
             <li class="icecream">
               <h3 class="icecream-name">
                 <a href="#" class="icecream-link">
-                  Сливочное с брусничным джемом
+                  Сливочное с брусничным<br> джемом
                 </a>
               </h3>
               <div class="icecream-container">
@@ -334,7 +339,7 @@
             <li class="icecream">
               <h3 class="icecream-name">
                 <a href="#" class="icecream-link">
-                  Сливочно-ванильное с кусочками шоколада
+                  Сливочно-ванильное с<br> кусочками шоколада
                 </a>
               </h3>
               <div class="icecream-container">
@@ -386,7 +391,7 @@
 
           <div class="pagination-wrapper">
             <ul class="pagination-list">
-              <li class="pagination-button back"><a href="#"></a></li>
+              <li class="pagination-button back"><a></a></li>
               <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
               <li class="pagination-item"><a href="#">2</a></li>
               <li class="pagination-item"><a href="#">3</a></li>
@@ -447,6 +452,9 @@
       </footer>
     </div>
   </div>
+
+  <script src="js/pop-up.js"></script>
+  <script src="js/basket.js"></script>
 
   </body>
 </html>
