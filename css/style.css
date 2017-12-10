@@ -275,7 +275,7 @@ ul {
   display: inline-block;
   margin: 6px 14px 0px;
 
-  font-weight: 500;
+  font-weight: 700;
   vertical-align: top;
   color: #ffffff;
 
@@ -820,6 +820,10 @@ ul {
   width: 45px;
 }
 
+.basket-image img {
+    border-radius: 50%;
+}
+
 .basket-product {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1072,7 +1076,7 @@ ul {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
@@ -1108,6 +1112,10 @@ ul {
   margin-bottom: 38px;
 }
 
+.icecream:not(:nth-child(4n)) {
+  margin-right: 26px;
+}
+
 .icecream:hover {
   z-index: 3;
 }
@@ -1137,6 +1145,7 @@ ul {
   z-index: 3;
 
   display: inline-block;
+  width: 267px;
   margin: 0;
   padding: 0;
 
@@ -1146,7 +1155,7 @@ ul {
 
 .icecream-link {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 22px;
   color: #ffffff;
 
@@ -1305,7 +1314,9 @@ ul {
 
           box-sizing: border-box;
   width: 540px;
-  padding: 12px 0 10px 56px;
+  padding: 12px 0 10px 57px;
+
+  font-weight: 400;
 }
 
 .about-icecream::before {
@@ -1465,6 +1476,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 549px;
   padding: 28px 21px 35px;
 
   background-color: #f8f7f4;
@@ -1505,6 +1517,10 @@ ul {
   margin: 0 -27px 0;
 
   overflow: hidden;
+}
+
+.map-input iframe {
+   border: none;
 }
 
 .map-input img {
@@ -1953,7 +1969,8 @@ ul {
 }
 
 .form-sort select {
-  padding: 9px 33px 9px 15px;
+  height: 36px;
+  padding: 6px 33px 8px 15px;
 
   font: inherit;
   font-size: 16px;
@@ -1961,7 +1978,7 @@ ul {
   line-height: 18px;
   color: #ffffff;
 
-  background-image: url('../img/select.svg');
+  background-image: url("../img/select.svg");
   background-position: 168px 13px;
   background-repeat: no-repeat;
   border: none;
@@ -1969,10 +1986,14 @@ ul {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 0.01px;
-  -o-text-overflow: '';
-     text-overflow: '';
+  -o-text-overflow: "";
+     text-overflow: "";
   -ms-appearance: none;
   appearance: none;
+}
+
+.form-sort select::-ms-expand {
+    display: none;
 }
 
 .form-sort option {
@@ -2087,9 +2108,10 @@ ul {
 
 .filter-button {
   margin-top: 7px;
-  padding: 7px 26px;
+  padding: 6px 26px 8px;
 
   font: inherit;
+  font-weight: 400;
   color: #ffffff;
 
   background-color: rgba(255, 255, 255, 0.3);
@@ -2215,6 +2237,7 @@ ul {
 .pagination-list a {
   font-size: 16px;
   font-weight: 500;
+  line-height: 18px;
   color: #ffffff;
 }
 
