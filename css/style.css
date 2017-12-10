@@ -65,12 +65,24 @@ ul {
   background-repeat: repeat-x;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .modal {
@@ -660,11 +672,13 @@ ul {
       align-self: flex-end;
   margin: 0 0 2px;
   padding: 0;
+  line-height: 16px;
 }
 
 .breadcrumbs-link {
   display: inline-block;
 
+  line-height: 16px;
   vertical-align: top;
 }
 
@@ -1600,7 +1614,7 @@ ul {
           justify-content: space-between;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 726px;
+  width: 729px;
   padding-top: 15px;
 }
 
@@ -1725,16 +1739,16 @@ ul {
       flex-wrap: wrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 163px;
+  width: 165px;
 }
 
 .footer-navigation-link {
   display: inline-block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 
   font-size: 13px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 16px;
   color: #ffffff;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 255, 255, 0.3)), to(transparent));
@@ -1744,7 +1758,7 @@ ul {
   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
 
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-  background-position: 0 16px;
+  background-position: 0 15px;
   background-repeat: repeat-x;
   background-size: 1px 1px;
 }
@@ -1950,7 +1964,7 @@ ul {
 
 .filter-style {
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   padding: 9px 0px;
 
   font-size: 16px;
@@ -1966,6 +1980,7 @@ ul {
 
   font-size: 14px;
   font-weight: 500;
+  line-height: 16px;
 }
 
 .form-sort select {
@@ -2159,11 +2174,6 @@ ul {
   opacity: 1;
 }
 
-.fat-radio:focus,
-.filler-checkbox:focus {
-  outline: inherit;
-}
-
 .fat-radio input[type="radio"] + .radio-indicator {
   position: absolute;
   top: -1px;
@@ -2214,7 +2224,7 @@ ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
  .pagination-list {
@@ -2232,6 +2242,7 @@ ul {
    width: 188px;
    margin:0;
    padding: 0;
+   line-height: 18px;
  }
 
 .pagination-list a {
