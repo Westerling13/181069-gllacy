@@ -6,8 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
-    <link href="css/style-formatted.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -74,7 +73,7 @@
                   </li>
                 </ul>
                 <div class="basket">
-                  <a class="right-navigation-link basket-empty">Пусто</a>
+                  <a class="right-navigation-link basket-link basket-empty">Пусто</a>
                 </div>
               </div>
             </div>
@@ -328,12 +327,12 @@
             <h2 class="visually-hidden">Форма обратной связи</h2>
             <h3 class="feedback-modal-header">Мы обязательно вам ответим!</h3>
             <button class="modal-close"></button>
-            <form class="form-style" action="#" method="post">
+            <form class="form-style feedback-form" action="#" method="post">
               <label class="visually-hidden" for="feedback-name">Имя</label>
-              <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+              <input class="feedback-name" type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
               <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-              <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
-              <textarea rows="6" cols="40" placeholder="Напишите что нибудь..."></textarea>
+              <input class="feedback-email"type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+              <textarea class="feedback-textarea" rows="6" cols="40" placeholder="Напишите что нибудь..."></textarea>
               <button class="button feedback-modal-button" type="submit" name="feedback">
                 Отправить
               </button>
@@ -345,7 +344,6 @@
     </div>
 
     <script src="js/pop-up.js"></script>
-    <script src="js/basket.js"></script>
 
   </body>
 </html>
