@@ -28,10 +28,8 @@ a {
   background-position: top center;
 
   -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
-
-  -o-transition: background-image 0.5s ease, background-color 0.5s ease;
-
-  transition: background-image 0.5s ease, background-color 0.5s ease;
+       -o-transition: background-image 0.5s ease, background-color 0.5s ease;
+          transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 .site-wrapper::before,
@@ -56,7 +54,6 @@ a {
 
 .catalog-page-wrapper {
   background-color: #849d8f;
-
   background-image: url("../img/light.png");
   background-repeat: repeat-x;
 }
@@ -73,9 +70,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   white-space: nowrap;
-
   -webkit-clip-path: inset(100%);
-
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -87,6 +82,14 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
   display: block;
+
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .button {
@@ -269,9 +272,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -290,11 +291,8 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 255, 255, 0.3)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
   background-position: 0 17px;
   background-repeat: repeat-x;
@@ -318,7 +316,6 @@ input[type="radio"].visually-hidden {
   padding: 6px 14px 8px;
 
   -webkit-box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.6);
-
           box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.6);
 }
 
@@ -329,7 +326,6 @@ input[type="radio"].visually-hidden {
   z-index: 10;
 
   -webkit-box-sizing: border-box;
-
           box-sizing: border-box;
   width: 143px;
   padding: 6px 0 3px;
@@ -472,9 +468,7 @@ input[type="radio"].visually-hidden {
   right: 10px;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -559,9 +553,7 @@ input[type="radio"].visually-hidden {
   z-index: 10;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -621,11 +613,8 @@ input[type="radio"].visually-hidden {
   color: #323232;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(50, 50, 50, 0.4)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.4) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(50, 50, 50, 0.4) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.4) 100%, transparent 100%);
   background-position: 0 1.3em;
   background-repeat: repeat-x;
@@ -638,11 +627,8 @@ input[type="radio"].visually-hidden {
   color: #e84d37;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 188, 158, 0.4)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(255, 188, 158, 0.4) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(255, 188, 158, 0.4) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(255, 188, 158, 0.4) 100%, transparent 100%);
   background-position: 0 1.3em;
   background-repeat: repeat-x;
@@ -650,10 +636,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sign-in-button {
-  display: inline-block;
   padding: 11px 25px 10px;
-
-  vertical-align: top;
 }
 
 .bottom-container {
@@ -713,18 +696,12 @@ input[type="radio"].visually-hidden {
 }
 
 .info-schedule {
-  display: inline-block;
   margin-bottom: 4px;
-
-  vertical-align: top;
 }
 
 .info-number {
-  display: inline-block;
-
   font-size: 22px;
   line-height: 24px;
-  vertical-align: top;
 }
 
 .basket {
@@ -794,7 +771,6 @@ input[type="radio"].visually-hidden {
   z-index: 10;
 
   -webkit-box-sizing: border-box;
-
           box-sizing: border-box;
   width: 540px;
   padding: 0px 15px 111px;
@@ -988,30 +964,30 @@ input[type="radio"].visually-hidden {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-#product-1:checked ~ .site-wrapper {
+.slider-radio-1:checked ~ .site-wrapper {
   background-color: #849d8f;
   background-image: url("../img/icecream-slider-1.png");
 }
 
-#product-2:checked ~ .site-wrapper {
+.slider-radio-2:checked ~ .site-wrapper {
   background-color: #8996a6;
   background-image: url("../img/icecream-slider-2.png");
 }
 
-#product-3:checked ~ .site-wrapper {
+.slider-radio-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
   background-image: url("../img/icecream-slider-3.png");
 }
 
-#product-1:checked ~ .site-wrapper #slide1,
-#product-2:checked ~ .site-wrapper #slide2,
-#product-3:checked ~ .site-wrapper #slide3 {
+.slider-radio-1:checked ~ .site-wrapper .slider-item-1,
+.slider-radio-2:checked ~ .site-wrapper .slider-item-2,
+.slider-radio-3:checked ~ .site-wrapper .slider-item-3 {
   display: block;
 }
 
-#product-1:checked ~ .site-wrapper label[for="product-1"],
-#product-2:checked ~ .site-wrapper label[for="product-2"],
-#product-3:checked ~ .site-wrapper label[for="product-3"] {
+.slider-radio-1:checked ~ .site-wrapper .slider-label-1,
+.slider-radio-2:checked ~ .site-wrapper .slider-label-2,
+.slider-radio-3:checked ~ .site-wrapper .slider-label-3 {
   background-color: #ffffff;
 }
 
@@ -1039,7 +1015,6 @@ input[type="radio"].visually-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 560px;
-
   margin-bottom: 26px;
   padding: 16px 19px 68px;
 
@@ -1081,10 +1056,7 @@ input[type="radio"].visually-hidden {
   right: 21px;
   bottom: 23px;
 
-  display: inline-block;
   padding: 10px 22px 12px;
-
-  vertical-align:
 }
 
 .index-products {
@@ -1115,9 +1087,7 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1167,13 +1137,11 @@ input[type="radio"].visually-hidden {
 .icecream-name {
   z-index: 3;
 
-  display: inline-block;
   width: 267px;
   margin: 0;
   padding: 0;
 
   text-align: center;
-  vertical-align: top;
 }
 
 .icecream-link {
@@ -1183,11 +1151,8 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 255, 255, 0.3)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
   background-position: 0 18px;
   background-repeat: repeat-x;
@@ -1200,11 +1165,8 @@ input[type="radio"].visually-hidden {
   color: #ffbc9e;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 188, 158, 0.3)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
   background-position: 0 18px;
   background-repeat: repeat-x;
@@ -1216,10 +1178,8 @@ input[type="radio"].visually-hidden {
   z-index: 3;
 
   -webkit-box-ordinal-group: 0;
-
       -ms-flex-order: -1;
-
-          order: -1;
+               order: -1;
   margin: 0 0 14px;
 }
 
@@ -1250,13 +1210,11 @@ input[type="radio"].visually-hidden {
   top: 209px;
   left: 0px;
 
-  display: inline-block;
   margin: 0;
   padding: 0;
 
   font-size: 45px;
   line-height: 45px;
-  vertical-align: top;
 
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
@@ -1270,11 +1228,13 @@ input[type="radio"].visually-hidden {
 
   display: inline-block;
   width: 35px;
-  height: 31px;
+  height: 40px;
+
+  vertical-align: top;
 
   background-image: url("../img/rub.png");
   background-repeat: no-repeat;
-  background-position: 5px -2px;
+  background-position: 5px 6px;
 }
 
 .send-button {
@@ -1336,9 +1296,7 @@ input[type="radio"].visually-hidden {
 
 .about-paragraph {
   position: relative;
-
   -webkit-box-sizing: border-box;
-
           box-sizing: border-box;
   width: 540px;
   padding: 12px 0 10px 57px;
@@ -1407,7 +1365,7 @@ input[type="radio"].visually-hidden {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
+     -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
 }
@@ -1445,11 +1403,8 @@ input[type="radio"].visually-hidden {
   color: #323232;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #323232), to(transparent));
-
   background-image: -webkit-linear-gradient(top, #323232 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, #323232 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, #323232 100%, transparent 100%);
   background-position: 0 25px;
   background-repeat: repeat-x;
@@ -1462,11 +1417,8 @@ input[type="radio"].visually-hidden {
   color: rgb(232, 77, 55);
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(232, 77, 55, 0.3)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(232, 77, 55, 0.3) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(232, 77, 55, 0.3) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(232, 77, 55, 0.3) 100%, transparent 100%);
   background-position: 0 25px;
   background-repeat: repeat-x;
@@ -1533,10 +1485,7 @@ input[type="radio"].visually-hidden {
 }
 
 .dispatch-button {
-  display: inline-block;
   padding: 8px 18px 12px;
-
-  vertical-align: top;
 }
 
 .map {
@@ -1563,7 +1512,6 @@ input[type="radio"].visually-hidden {
   left: 871px;
 
   -webkit-box-sizing: border-box;
-
           box-sizing: border-box;
   width: 302px;
   padding: 27px 25px 31px;
@@ -1600,10 +1548,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-button {
-  display: inline-block;
   padding: 9px 27px 11px;
-
-  vertical-align: top;
 }
 
 .main-footer {
@@ -1721,9 +1666,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1751,9 +1694,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1769,14 +1710,12 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
+  vertical-align: top;
   color: #ffffff;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 255, 255, 0.3)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
   background-position: 0 15px;
   background-repeat: repeat-x;
@@ -1789,11 +1728,8 @@ input[type="radio"].visually-hidden {
   color: #ffbc9e;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 188, 158, 0.3)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
   background-position: 0 16px;
   background-repeat: repeat-x;
@@ -1823,11 +1759,8 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 255, 255, 0.3)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 100%, transparent 100%);
   background-position: 0 15px;
   background-repeat: repeat-x;
@@ -1840,11 +1773,8 @@ input[type="radio"].visually-hidden {
   color: rgb(255, 188, 158);
 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(255, 188, 158, 0.3)), to(transparent));
-
   background-image: -webkit-linear-gradient(top, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
-
   background-image: -o-linear-gradient(top, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
-
   background-image: linear-gradient(to bottom, rgba(255, 188, 158, 0.3) 100%, transparent 100%);
   background-position: 0 15px;
   background-repeat: repeat-x;
@@ -1858,7 +1788,6 @@ input[type="radio"].visually-hidden {
   z-index: 30;
 
   -webkit-box-sizing: border-box;
-
           box-sizing: border-box;
   width: 477px;
   padding: 16px 25px 96px;
@@ -1867,9 +1796,7 @@ input[type="radio"].visually-hidden {
   border-radius: 10px;
 
   -webkit-transform: translateX(-50%) translateY(-50%);
-
       -ms-transform: translateX(-50%) translateY(-50%);
-
           transform: translateX(-50%) translateY(-50%);
 }
 
@@ -2005,7 +1932,8 @@ input[type="radio"].visually-hidden {
 
 .form-sort select {
   height: 36px;
-  padding: 6px 33px 8px 15px;
+  width: 193px;
+  padding: 6px 25px 8px 15px;
 
   font: inherit;
   font-size: 16px;
@@ -2017,8 +1945,6 @@ input[type="radio"].visually-hidden {
   background-position: 168px 13px;
   background-repeat: no-repeat;
   border: none;
-
-
   text-indent: 0.01px;
   -o-text-overflow: "";
      text-overflow: "";
@@ -2029,7 +1955,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-sort select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 .form-sort option {
@@ -2080,13 +2006,16 @@ input[type="radio"].visually-hidden {
 
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-
   width: 20px;
   height: 20px;
 
   background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.range-marker:focus {
+  outline: 1px dotted black;
 }
 
 .min {
@@ -2117,14 +2046,18 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  left: 40%;
-  top: 40%;
+  left: 50%;
+  top: 50%;
 
   width: 4px;
   height: 4px;
 
   background-color: #ababab;
   border-radius: 50%;
+
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 
 .range-marker:hover::before {
@@ -2173,7 +2106,7 @@ input[type="radio"].visually-hidden {
           box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.64);
 }
 
-.fat-radio {
+.fat-label {
   position: relative;
 
   padding-left: 33px;
@@ -2181,7 +2114,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.fat-radio:not(:last-child) {
+.fat-label:not(:last-child) {
   margin-right: 12px;
 }
 
@@ -2195,7 +2128,7 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
-.fat-radio input[type="radio"] + .radio-indicator {
+.fat-radio + .radio-indicator {
   position: absolute;
   top: -1px;
   left: 0;
@@ -2207,11 +2140,15 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-.fat-radio input[type="radio"]:checked + .radio-indicator {
+.fat-radio:focus + .radio-indicator {
+  outline: 1px dotted black;
+}
+
+.fat-radio:checked + .radio-indicator {
   background-image: url("../img/radio-on.svg");
 }
 
-.filler-checkbox {
+.filler-label {
   position: relative;
 
   padding-left: 31px;
@@ -2219,11 +2156,11 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.filler-checkbox:not(:last-child) {
+.filler-label:not(:last-child) {
   margin-right: 19px;
 }
 
-.filler-checkbox input[type="checkbox"] + .checkbox-indicator {
+.filler-checkbox + .checkbox-indicator {
   position: absolute;
   top: 0;
   left: 0;
@@ -2234,8 +2171,12 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
 }
-.filler-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+.filler-checkbox:checked + .checkbox-indicator {
   background-image: url("../img/checkbox-on.svg");
+}
+
+.filler-checkbox:focus + .checkbox-indicator {
+  outline: 1px dotted black;
 }
 
 .pagination-wrapper {
@@ -2276,6 +2217,7 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-button {
+  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 9px;
@@ -2293,9 +2235,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 
   -webkit-transform: rotate(180deg);
-
       -ms-transform: rotate(180deg);
-
           transform: rotate(180deg);
 }
 
@@ -2332,4 +2272,98 @@ input[type="radio"].visually-hidden {
   color: #323232;
 
   background-color: #ffffff;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+
+  70% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }

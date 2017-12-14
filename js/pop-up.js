@@ -23,6 +23,7 @@ signin_link.addEventListener("mouseenter", function (evt) {
 signin_popup.addEventListener("mouseleave", function (evt) {
   signin_popup.classList.remove("modal-show");
   signin_link.classList.remove("sign-in-link-hover");
+  signin_popup.classList.remove("modal-error");
 });
 
 search_link.addEventListener("mouseenter", function (evt) {
@@ -54,5 +55,19 @@ window.addEventListener("keydown", function (evt) {
      if (feedback_popup.classList.contains("modal-show")) {
        feedback_popup.classList.remove("modal-show");
     }
+  }
+});
+
+var signin_form = signin_popup.querySelector("form");
+var email = signin_popup.querySelector("[name=email]");
+var password = signin_popup.querySelector("[name=password]");
+
+signin_form.addEventListener("submit", function (evt) {
+  if (!email.value || !password.value) {
+    evt.preventDefault();
+    signin_popup.classList.remove("modal-error");
+    signin_popup.offsetWidth = signin_popup.offsetWidth;
+    signin_popup.classList.add("modal-error");
+    console.log("Нужно ввести логин и пароль");
   }
 });
